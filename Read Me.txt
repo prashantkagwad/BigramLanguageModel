@@ -1,0 +1,54 @@
+The program has multiple .java files in the project namespace that are required for proper execution of the program. 
+
+There are two parts for this program : 
+1. Reading the training file and generating the language model file.
+2. Reading the test file and language model file (generated in the previous step) and generating the perplexity.
+
+
+To perform the first step, you need to run BigramTrain.java. <this is the main .java file for this step>
+
+Tested on both windows cmd prompt & university linux servers:
+
+Step 1 : > javac  *.java
+Step 2: > java BigramTrain -text <training file> -lm <language model>              
+
+Expected Input  : \BigramLM > java BigramTrain -text hw2_train.txt -lm lm.txt
+
+Expected output : \BigramLM > Language Model Generated in 1316 milli-seconds at : D:\WorkSpace\BigramLM\lm.txt
+
+The program takes 4 arguments -
+First Argument  : just type -text
+Second Argument : type the name of the training file
+Third Argument  : just type -lm
+Fourth Argument : type the name of the language model file
+
+Any number of arguments less or more than 4 will cause the program to exit.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+To perform the second step, you need to run BigramTest.java. <this is the main .java file for this step>
+
+Tested on both windows cmd prompt & university linux servers:
+
+Step 1 : > javac  *.java
+Step 2: > java BigramTest -text <test file> -lm <language model>
+
+Expected Input  : \BigramLM > java BigramTest -text hw2_test.txt -lm lm.txt
+
+Expected output : \BigramLM > Perplexity : 54.03400649985127
+
+The program takes 4 arguments -
+First Argument  : just type -text
+Second Argument : type the name of the test file
+Third Argument  : just type -lm
+Fourth Argument : type the name of the language model file
+
+Any number of arguments less or more than 4 will cause the program to exit.
+
+<pathinfo> - The path is already feed in the program. It takes these files from the Project folder. 
+If you want to test the program on new files other than the onces given to us, please drop these files in the project folder and pass only the name of the file as an argument to the program.
+The language model file (lm.txt) is also generated in the same Project Folder as shown in the output on the execution of BigramTrain.java 
+
+
+
+
